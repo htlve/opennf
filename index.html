@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>OpenNefia Web</title>
+  <meta charset="UTF-8">
+  <title>OpenNefia in Browser</title>
 </head>
 <body>
-  <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
-
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script src="love.js"></script>
   <script>
-    Module = {
-      arguments: ["opennefia.love"],
-      canvas: document.getElementById("canvas")
+    var Module = {
+      canvas: document.getElementById('canvas')
+    };
+    window.onload = function () {
+      Module.arguments = ["opennefia.love"];
     };
   </script>
-  <script async src="love.js"></script>
 </body>
 </html>
